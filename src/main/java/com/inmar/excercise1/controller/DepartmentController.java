@@ -50,7 +50,7 @@ public class DepartmentController {
 	}
 	
 	@DeleteMapping("/{departmentid}")
-	public String deleteDepartment(@PathVariable Long departmentid,@PathVariable Long locationid){
+	public ResponseEntity<Department> deleteDepartment(@PathVariable Long departmentid,@PathVariable Long locationid){
 		
 		return departmentService.deleteDepartment(departmentid,locationid);
 	}

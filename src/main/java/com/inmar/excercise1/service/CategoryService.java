@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.inmar.excercise1.model.Category;
 import com.inmar.excercise1.model.Department;
+import com.inmar.excercise1.model.Location;
 import com.inmar.excercise1.repositary.CategoryRepositary;
 import com.inmar.excercise1.repositary.DepartmentRepositary;
 import com.inmar.excercise1.repositary.LocationRepositary;
@@ -83,15 +84,15 @@ public class CategoryService {
 
 	}
 
-	public String deleteCategory(Long departmentid,Long categoryId) {
+	public ResponseEntity<Category> deleteCategory(Long departmentid,Long categoryId) {
 
 		
 		//implementation for department id and location id check
 		Long result= categoryRepositary.deleteByDepartmentIdAndId(departmentid, categoryId);
         
 		if(result>0)
-			return "Deleted Success Fully";
-		return "Unable to Find Entity";
+			return ResponseEntity.ok().build();
+		return ResponseEntity.notFound().build();
 		
 	}
 

@@ -1,6 +1,7 @@
 package com.inmar.excercise1;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -15,6 +16,8 @@ import com.inmar.excercise1.corsfilter.CORSFilter;
 
 @SpringBootApplication
 
+@EnableAutoConfiguration
+
 public class Excercise1Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args)  throws Exception {
@@ -26,8 +29,6 @@ public class Excercise1Application extends SpringBootServletInitializer {
 		return application.sources(Excercise1Application.class);
 	}
 	
-	 
-		
 	@Bean
     public FilterRegistrationBean corsFilterRegistration() {
         FilterRegistrationBean registrationBean =

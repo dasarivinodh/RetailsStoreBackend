@@ -1,4 +1,4 @@
-package com.inmar.excercise1.excercise1;
+package com.inmar.excercise1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

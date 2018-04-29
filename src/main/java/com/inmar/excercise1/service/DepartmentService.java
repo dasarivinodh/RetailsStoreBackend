@@ -21,8 +21,9 @@ public class DepartmentService {
 
 	@Autowired
 	LocationRepositary locationRepositary;
-
-	Location location = new Location();
+	
+    @Autowired
+	Location location;
 
 	public List<Department> getAllDepartment(Long locationid) {
 
@@ -66,13 +67,13 @@ public class DepartmentService {
 		return ResponseEntity.accepted().build();
 	}
 
-	public String deleteDepartment(Long departmentid, Long locationid) {
+	public ResponseEntity<Department> deleteDepartment(Long departmentid, Long locationid) {
 		Long result = departmentRepositary.deleteByLocationIdAndId(locationid,
 				departmentid);
 
 		if (result > 0)
-			return "Department Deleted ";
-		return "No Department with Matching Values";
+			return ResponseEntity.ok().build();
+		return ResponseEntity.notFound().build();
 	}
 
 }

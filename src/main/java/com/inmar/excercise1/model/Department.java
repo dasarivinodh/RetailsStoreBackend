@@ -38,18 +38,18 @@ public class Department {
 	@ManyToOne
 	@JoinColumn(name = "location_id", nullable = false)
 	private Location location;
+//
+//	@OneToMany(mappedBy = "department")
+//	private List<Category> categorylist = new ArrayList<Category>();
 
-	@OneToMany(mappedBy = "department")
-	private List<Category> categorylist = new ArrayList<Category>();
-
-	@JsonIgnore
-	public List<Category> getCategorylist() {
-		return categorylist;
-	}
-
-	public void setCategorylist(List<Category> categorylist) {
-		this.categorylist = categorylist;
-	}
+//	@JsonIgnore
+//	public List<Category> getCategorylist() {
+//		return categorylist;
+//	}
+//
+//	public void setCategorylist(List<Category> categorylist) {
+//		this.categorylist = categorylist;
+//	}
 
 	@JsonIgnore
 	public Location getLocation() {

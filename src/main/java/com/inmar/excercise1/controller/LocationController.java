@@ -56,7 +56,7 @@ public class LocationController {
 		return locationService.updateLocation(location);
 	}
 	@DeleteMapping("/{locationId}")
-	public String deleteLocation(@PathVariable(value="locationId") Long locationId){
+	public ResponseEntity<Location> deleteLocation(@PathVariable(value="locationId") Long locationId){
 		
 		return locationService.deleteLocation(locationId);
 	}

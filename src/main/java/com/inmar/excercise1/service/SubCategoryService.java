@@ -93,12 +93,12 @@ public class SubCategoryService {
 		return null;
 	}
 
-	public String deleteSubCategory(Long categoryId, Long subCategoryId) {
+	public ResponseEntity<SubCategory> deleteSubCategory(Long categoryId, Long subCategoryId) {
 		Long result = subCategoryRepositary.deleteByCategoryIdAndId(categoryId,
 				subCategoryId);
 		if (result > 0)
-			return "Deleted Successfully";
-		return "No Dat Found";
+			return ResponseEntity.ok().build();
+		return ResponseEntity.notFound().build();
 	}
 
 }

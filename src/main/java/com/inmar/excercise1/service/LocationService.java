@@ -45,13 +45,14 @@ public class LocationService {
 		return ResponseEntity.accepted().body(l);
 	}
 
-	public String deleteLocation(Long locationId) {
+	public ResponseEntity<Location> deleteLocation(Long locationId) {
 
+		
 		if (locationRepositary.findById(locationId).isPresent()) {
 			locationRepositary.deleteById((long) locationId);
-			return "Location " + locationId + "Deleted Succesfully";
+			return ResponseEntity.ok().build();
 		}
-		return "Id Not Found";
+		return ResponseEntity.notFound().build();
 	}
 
 }

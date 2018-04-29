@@ -53,7 +53,7 @@ public class CategoryController {
 	
 	}
 	@DeleteMapping("/{categoryid}")
-	public String deleteCategory(@PathVariable Long departmentid,@PathVariable Long categoryid){
+	public ResponseEntity<Category> deleteCategory(@PathVariable Long departmentid,@PathVariable Long categoryid){
 		
 		return categoryService.deleteCategory(departmentid,categoryid);
 	}

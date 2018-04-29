@@ -66,5 +66,16 @@ public class Location {
 		this.description = description;
 	}
 
+	public Location() {
+		super();
+	}
+
+	public Location(Long id, String name,  String description) {
+		
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
 	
 }

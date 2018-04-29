@@ -51,7 +51,7 @@ public class SubCategoryController {
 		return subCategoryService.updateSubCategory(subCategory,locationid,departmentid,categoryid);
 	}
 	@DeleteMapping("/{subcategoryid}")
-	public String deleteSubCategory(@PathVariable Long categoryid,@PathVariable Long subcategoryid){
+	public ResponseEntity<SubCategory> deleteSubCategory(@PathVariable Long categoryid,@PathVariable Long subcategoryid){
 		
 		return subCategoryService.deleteSubCategory(categoryid,subcategoryid);
 	}
