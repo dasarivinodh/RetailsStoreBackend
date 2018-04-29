@@ -1,7 +1,6 @@
 package com.inmar.excercise1.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inmar.excercise1.model.Department;
-import com.inmar.excercise1.model.Location;
 import com.inmar.excercise1.service.DepartmentService;
 import com.inmar.excercise1.service.LocationService;
 

@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.inmar.excercise1.repositary.LocationRepositary;
 import com.inmar.excercise1.model.Location;
+import com.inmar.excercise1.repositary.LocationRepositary;
 
 @Service
 public class LocationService {

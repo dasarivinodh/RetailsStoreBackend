@@ -1,13 +1,11 @@
 package com.inmar.excercise1.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.inmar.excercise1.model.Category;
 import com.inmar.excercise1.model.Department;
 import com.inmar.excercise1.model.Location;
 import com.inmar.excercise1.repositary.DepartmentRepositary;

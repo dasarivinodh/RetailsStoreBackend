@@ -1,11 +1,7 @@
 package com.inmar.excercise1.controller;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
-import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inmar.excercise1.model.Location;
-import com.inmar.excercise1.repositary.LocationRepositary;
 import com.inmar.excercise1.service.LocationService;
 
 @CrossOrigin(origins = "http://localhost:8080/", maxAge = 3600)
@@ -32,7 +27,7 @@ public class LocationController {
 	@Autowired
 	LocationService locationService;
 	
-//	 @CrossOrigin(origins = "http://localhost/Excercise1/location")
+
 	@GetMapping()
 	public List<Location> getAllLocations(){
 		
@@ -44,7 +39,7 @@ public class LocationController {
 		
 		return locationService.getLocationById(locationid);
 	}
-//	 @CrossOrigin(origins = "http://localhost/Excercise1/location")
+	
 	@PostMapping()
 	public Location createLocation(@RequestBody Location location){
 		

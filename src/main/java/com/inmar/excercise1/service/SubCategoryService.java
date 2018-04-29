@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.inmar.excercise1.model.Category;
-import com.inmar.excercise1.model.Department;
 import com.inmar.excercise1.model.SubCategory;
 import com.inmar.excercise1.repositary.CategoryRepositary;
 import com.inmar.excercise1.repositary.DepartmentRepositary;
