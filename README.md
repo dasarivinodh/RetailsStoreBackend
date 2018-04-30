@@ -31,7 +31,10 @@ see application properties file under src/main/resources for more info
 
 ###### maven command to run the build #######
 
-mvn clean install
+mvn clean install             (with test cases)
+mvn clean install -DskipTests (with out test cases)
+
+Any issues, try to remove files already installed in local repositary 
 
 ###### start the application ###### 
 
