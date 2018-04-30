@@ -10,11 +10,14 @@ Make sure your  %JAVA_HOME%  and %JRE_HOME% is set to java 1.8
 Install My Sql DB 
 
 Option 1:
+
 1. create a database with name 'hibernate'
+
 2. Spring boot will take care remaining(creating tables)
 
 Option 2:
-  Run the hiberbate.sql file provided in Repository
+
+Run the hiberbate.sql file provided in Repository
 
 
 ######  Application Properties ########
@@ -34,6 +37,7 @@ see application properties file under src/main/resources for more info
 ###### maven command to run the build #######
 
 mvn clean install             (with test cases)
+
 mvn clean install -DskipTests (with out test cases)
 
 Any issues, try to remove files already installed in local repositary 
