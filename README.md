@@ -24,7 +24,9 @@ configure the datasource url , username and password
 default values
 
 spring.datasource.url=jdbc:mysql://localhost:3306/hibernate?useSSL=false
+
 spring.datasource.username=root
+
 spring.datasource.password=root
 
 see application properties file under src/main/resources for more info
